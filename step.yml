@@ -8,7 +8,7 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Browserstack Genrate Coverage
+  Browserstack Generate Coverage
 summary: |
   Step to upload app to generate coverage files.
 description: |
