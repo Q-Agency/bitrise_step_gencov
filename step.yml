@@ -8,14 +8,14 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Browserstack App Automate Upload
+  Browserstack Genrate Coverage
 summary: |
-  Step to upload app to Browserstack app automate
+  Step to upload app to generate coverage files.
 description: |
-  Step to upload ipa, apk or abb files to Browserstack app automate service,. Step outputs Browserstack app url
-website: https://github.com/frkizg/bitrise_step.git
-source_code_url: https://github.com/frkizg/bitrise_step.git
-support_url: https://github.com/frkizg/bitrise_step.git
+  Step to upload app to generate coverage files.
+website: https://github.com/Q-Agency/bitrise_step_gencov.git
+source_code_url: https://github.com/Q-Agency/bitrise_step_gencov.git
+support_url: https://github.com/Q-Agency/bitrise_step_gencov.git
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -62,39 +62,27 @@ toolkit:
   bash:
     entry_file: step.sh
 
-
 inputs:
-  - browserstack_user_name: $BROWSERSTACK_USER_NAME
+  - treshold: $GEN_COV_TRESHOLD
     opts:
-      category: Browserstack credentials
-      title: "Browserstack User Name"
+      title: "Treshold for code coverage. From 0 to 1.0"
       summary: "Enter your Browserstack User Name"
       description: "Enter your Browserstack User Name"
       type: text
-      is_sensitive: true
       is_required: true
       is_expand: true
 
-  - browserstack_access_key: $BROWSERSTACK_ACCESS_KEY
+  - severity: error
     opts:
-      category: Browserstack credentials
-      title: "Browserstack Access Key"
-      summary: "Enter your Browserstack Access Key"
-      description: "Enter your Browserstack Access Key"
-      type: text
-      is_sensitive: true
+      title: "Severity for code coverage"
+      summary: "Severity for code coverage"
+      description: "Severity for code coverage"
+      value_options:
+      - error
+      - warning
+      - info
       is_required: true
-      is_expand: true
-  
-  - file_to_upload:
-    opts:
-      title: "File to upload"
-      summary: "Select the file to upload"
-      description: "Select the file to upload"
-      type: file
-      is_required: true
-      is_expand: true
-
+      
 outputs:
   - APP_URL: "$BROWSERSTACK_APP_AUTOMATE_IOS_URL"
     opts:
