@@ -79,8 +79,17 @@ inputs:
       description: "Severity for code coverage"
       value_options:
       - error
-      - warning
       - info
+      is_required: true
+      
+  - with_widgets: true
+    opts:
+      title: "Include widgets"
+      summary: "Include widgets for code coverage"
+      description: "Include widgets for code coverage"
+      value_options:
+      - true
+      - false
       is_required: true
       
 outputs:
