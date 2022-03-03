@@ -2,8 +2,8 @@
 set -ex
 
 brew install lcov
-bash ./gencov.sh --withWidgetTests ${with_widgets}
-bash ./coverage_calc.sh --severity ${severity} --threshold ${treshold} --withWidgetTests ${with_widgets}
+bash gencov.sh --withWidgetTests ${with_widgets}
+bash coverage_calc.sh --severity ${severity} --threshold ${treshold} --withWidgetTests ${with_widgets}
 
 #
 # --- Export Environment Variables for other Steps:
