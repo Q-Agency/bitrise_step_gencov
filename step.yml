@@ -8,11 +8,11 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Browserstack Generate Coverage
+  Q Generate Code Coverage
 summary: |
-  Step to upload app to generate coverage files.
+  Stepto generate coverage files.
 description: |
-  Step to upload app to generate coverage files.
+  Step to generate coverage files.
 website: https://github.com/Q-Agency/bitrise_step_gencov.git
 source_code_url: https://github.com/Q-Agency/bitrise_step_gencov.git
 support_url: https://github.com/Q-Agency/bitrise_step_gencov.git
@@ -91,11 +91,3 @@ inputs:
       - true
       - false
       is_required: true
-      
-outputs:
-  - APP_URL: "$BROWSERSTACK_APP_AUTOMATE_IOS_URL"
-    opts:
-      title: "Browserstack App Automate App URL"
-      summary: "Url for your Browserstack App Automate app"
-      description: "Url for your Browserstack App Automate app"
-
